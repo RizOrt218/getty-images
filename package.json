@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/RizOrt218/getty_images/issues"
   },
-  "homepage": "https://github.com/RizOrt218/getty_images#readme"
+  "homepage": "https://github.com/RizOrt218/getty_images#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-sass": "^2.1.1"
+  }
 }
