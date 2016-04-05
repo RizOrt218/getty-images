@@ -3,11 +3,11 @@ var sass       = require('gulp-sass');
 var connect    = require('gulp-connect');
 var livereload = require('gulp-livereload');
 
-gulp.task('start', function () {
-  nodemon({
-    script : 'server.js'
-  });
-});
+// gulp.task('start', function () {
+//   nodemon({
+//     script : 'server.js'
+//   });
+// });
 
 gulp.task('connect', function(){
   connect.server({
