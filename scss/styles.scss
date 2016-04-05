@@ -2,8 +2,19 @@
 
 body {
   background-color: #FFF0F0;
+  display: flex;
+  min-height: 200vh;
+  flex-direction: column;
 }
 
+.topContent {
+  position: fixed;
+  width: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
 .input-field {
   padding: 0px 10px;
   width: 85%;
@@ -32,7 +43,7 @@ form {
 
 .containerImg {
   width: 80%;
-  margin: 30px auto;
+  margin: 25% auto;
   overflow: hidden;
 }
 
