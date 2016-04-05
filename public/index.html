@@ -3,31 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>My Gettys</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <nav>
-    <div class="navbar-wrapper container">
-      <p>Getty Images</p>
+    <div class="nav-wrapper container">
+
       <ul class="right">
-        <li class="pink"><a href="#">Home</a></li>
+        <li class=""><a href="#">Home</a></li>
+        <li class=""><a href="#">About</a></li>
+        <li class=""><a href="#">Contact</a></li>
       </ul>
+
     </div>
   </nav>
 
+ <div>
+    <form>
+     <div class="input-field">
+       <input id="input" type="search" required>
+       <label for="search">
+         <i class="material-icons">search</i>
+       </label>
+     </div>
+     <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
+   </form>
+ </div>
 
-  <input id='input' type="text">
-  <button id='searchBtn'>text</button>
-  <div class="container"></div>
-  <img src="" alt="">
+  <div class="imagesWrapper">
+    <div class="images"></div>
+  </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+
+  <!-- <input id='input' type="text">
+    <a id="searchBtn" class="waves-effect waves-light btn right">Search</a>
+  </input> -->
+
+
+
+<!--   <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Rizhia Ortega</h5>
+          <p class="grey-text text-lighten-4">Student of DevLeage Cohort 9</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/RizOrt218">GitHub Profile</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/rizhiaortega">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2016 Copyright
+      </div>
+    </div>
+  </footer> -->
+
   <script src='/js/apps.js'></script>
 </body>
 </html>
