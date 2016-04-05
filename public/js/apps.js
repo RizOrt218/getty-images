@@ -18,19 +18,45 @@ $( document ).ready( function () {
       var images = data.images;
 
       //append each images data
-      images.forEach(function(img){
+      images.forEach(function(data){
 
-        var imgUri = img.display_sizes[0].uri;
+        var imgUri = data.display_sizes[0].uri;
+        var caption = data.caption;
+        var title = data.title;
+
+        console.log("CAPTION", caption);
+        console.log("TITLE", title);
 
         //creating img script for each photo url
         var contentBlock = $( '<img>', {
           src : imgUri,
-          class : 'contentImg'
+          class : 'contentImg',
+          href : imgUri
         });
 
-        $( '.images' ).append( contentBlock );
+        var titleContent = $('<p/>', {
+          class : 'title'
+        }).append( title );
+
+        var captionCont = $('<p/>', {
+          class : 'caption'
+        }).append( caption );
+
+        var galleryItem = $('<div/>', {
+          class : 'galleryItem'
+        }).append(contentBlock, titleContent, captionCont);
+
+        $( '.containerImg' ).append( galleryItem );
+
+
 
       }); // end forEach
+
+      $('.contentImg').click(function(data) {
+        console.log("DATA", data);
+        console.log("consoleLogging", this);
+
+      });
     }); // end AJAX
   }); // end #searchBtn.click()
 }); // end .ready
