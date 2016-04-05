@@ -1,6 +1,7 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var connect = require('gulp-connect');
+var gulp       = require('gulp');
+var sass       = require('gulp-sass');
+var connect    = require('gulp-connect');
+var livereload = require('gulp-livereload');
 
 gulp.task('connect', function(){
   connect.server({
