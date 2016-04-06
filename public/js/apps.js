@@ -1,9 +1,8 @@
 var apiKey = 'nntbe78g2yfwq7wcwbzgpm2w';
 
-$( document ).ready( function () {
-
   // button search and populates image block with search text
   $( '#searchBtn' ).click( function () {
+
     var textInput = $( '#input' ).val();
 
     // AJAX request to gettyimages api
@@ -13,7 +12,6 @@ $( document ).ready( function () {
       },
       method : 'GET'
     }).done( function( data ) {
-      console.log(data);
 
       var images = data.images;
 
@@ -24,8 +22,8 @@ $( document ).ready( function () {
         var caption = data.caption;
         var title = data.title;
 
-        console.log("CAPTION", caption);
-        console.log("TITLE", title);
+        // console.log("CAPTION", caption);
+        // console.log("TITLE", title);
 
         //creating img script for each photo url
         var contentBlock = $( '<img>', {
@@ -48,15 +46,6 @@ $( document ).ready( function () {
 
         $( '.containerImg' ).append( galleryItem );
 
-
-
       }); // end forEach
-
-      $('.contentImg').click(function(data) {
-        console.log("DATA", data);
-        console.log("consoleLogging", this);
-
-      });
     }); // end AJAX
   }); // end #searchBtn.click()
-}); // end .ready
